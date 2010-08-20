@@ -13,11 +13,17 @@ public class BundleLableProvider extends LabelProvider implements
 	private static final Image BUNDLE = Activator.getDefault()
 			.getImageDescriptor("icons/bundle.png").createImage();
 	
+	private static final Image BUNDLE_STOPPED = Activator.getDefault()
+		.getImageDescriptor("icons/bundle_stopped.png").createImage();
+	
 	@Override
 	public Image getColumnImage(Object arg0, int arg1) {
-		if (arg1 == 0) {
+		ListCmdPojo cmdPojo = (ListCmdPojo) arg0;
+		if ((arg1 == 0) && (cmdPojo.getBundleState().equals("Active"))) {
 			return BUNDLE;
-		} 
+		} else if ((arg1 == 0) && (cmdPojo.getBundleState().equals("Resolved"))) {
+			return BUNDLE_STOPPED;
+		}
 		return null;
 	}
 
