@@ -19,6 +19,8 @@ import com.yobny.opensource.osgi.karafview.Activator;
 import com.yobny.opensource.osgi.karafview.view.action.InstallAction;
 import com.yobny.opensource.osgi.karafview.view.action.ListAction;
 import com.yobny.opensource.osgi.karafview.view.action.RefreshAction;
+import com.yobny.opensource.osgi.karafview.view.action.StartAction;
+import com.yobny.opensource.osgi.karafview.view.action.StopAction;
 
 public class KarafAdminView extends ViewPart {
 
@@ -70,17 +72,17 @@ public class KarafAdminView extends ViewPart {
 	private void fillLocalToolBar(IToolBarManager manager) {
 		try {
 			
-			manager.add(new RefreshAction("Start", "Start", ImageDescriptor
+			manager.add(new StartAction("Start", "Start", ImageDescriptor
 					.createFromURL(new URL(Activator.getDefault().getBundle()
-							.getEntry("/"), "icons/start.gif")), statusManager));
+							.getEntry("/"), "icons/start.gif")), statusManager, this.tableViewer));
 			
-			manager.add(new RefreshAction("Stop", "Stop", ImageDescriptor
+			manager.add(new StopAction("Stop", "Stop", ImageDescriptor
 					.createFromURL(new URL(Activator.getDefault().getBundle()
-							.getEntry("/"), "icons/stop.gif")), statusManager));
+							.getEntry("/"), "icons/stop.gif")), statusManager, this.tableViewer));
 			
 			manager.add(new RefreshAction("Refresh", "Refresh", ImageDescriptor
 					.createFromURL(new URL(Activator.getDefault().getBundle()
-							.getEntry("/"), "icons/refresh.gif")), statusManager));
+							.getEntry("/"), "icons/refresh.gif")), statusManager, this.tableViewer));
 			
 			
 			manager.add(new InstallAction("Install", "Install", ImageDescriptor
