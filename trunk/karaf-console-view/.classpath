@@ -9,5 +9,6 @@
 	<classpathentry kind="lib" path="lib/karaf-client.jar"/>
 	<classpathentry kind="lib" path="lib/mina-core-2.0.0-RC1.jar"/>
 	<classpathentry kind="lib" path="lib/sshd-core-0.3.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.osgi.service.obr-1.0.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
