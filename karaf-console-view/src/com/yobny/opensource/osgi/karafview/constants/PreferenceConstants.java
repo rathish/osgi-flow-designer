@@ -19,4 +19,6 @@ public abstract class PreferenceConstants {
 	public static final String karafConsoleRequired = "Karaf Console Required";
 	
 	public static final String browseButton = "/..";
+	
+	public static final String IMPORT_PATH_SEP = ":";
 }

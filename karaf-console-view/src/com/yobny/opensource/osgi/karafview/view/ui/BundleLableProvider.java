@@ -21,7 +21,7 @@ public class BundleLableProvider extends LabelProvider implements
 		ListCmdPojo cmdPojo = (ListCmdPojo) arg0;
 		if ((arg1 == 0) && (cmdPojo.getBundleState().equals("Active"))) {
 			return BUNDLE;
-		} else if ((arg1 == 0) && (cmdPojo.getBundleState().equals("Resolved"))) {
+		} else if (arg1 == 0) {
 			return BUNDLE_STOPPED;
 		}
 		return null;
