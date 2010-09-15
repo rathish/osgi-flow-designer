@@ -26,45 +26,28 @@ public class BundleRepoURLField extends FieldEditor {
 
 	public Button browseButton;
 
-	public boolean listTrue = false;
-
-	public BundleRepoURLField(String name, String labelText, Composite parent,
-			boolean list) {
+	public BundleRepoURLField(String name, String labelText, Composite parent) {
 		init(name, labelText);
-		this.listTrue = list;
 		createControl(parent);
 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.jface.preference.FieldEditor#doFillIntoGrid(org.eclipse.swt.widgets.Composite,
-	 *      int)
-	 */
 	protected void doFillIntoGrid(Composite parent, int numColumns) {
-		Control control = getLabelControl(parent);
+		
 		GridData gd = new GridData();
-		control.setLayoutData(gd);
-		control.setFont(parent.getFont());
-		gd = new GridData();
-		if (this.listTrue == false)
-			control = getPathField(parent);
-		else {
-			control = getListPathField(parent);
-			gd.heightHint = 50;
-		}
-
+		
+		// Add URL List
+		//
+		Control control = getListPathField(parent);
+		gd.heightHint = 50;
 		gd.widthHint = 250;
 		gd.horizontalAlignment = GridData.FILL;
 		control.setLayoutData(gd);
 		control.setFont(parent.getFont());
 
-		if (this.listTrue == false)
-			control = getBrowseFiled(parent);
-		else
-			control = getButtonContainer(parent);
-
+		// Add URL Manage Buttons
+		//
+		control = getButtonContainer(parent);
 		gd = new GridData();
 		gd.horizontalAlignment = GridData.FILL;
 		control.setLayoutData(gd);
@@ -77,6 +60,8 @@ public class BundleRepoURLField extends FieldEditor {
 		gridLayout.numColumns = 1;
 		buttonComp.setLayout(gridLayout);
 
+		// Add Button
+		//
 		if (browseButton == null) {
 			browseButton = new Button(buttonComp, SWT.PUSH);
 			GridData gd = new GridData();
@@ -85,11 +70,13 @@ public class BundleRepoURLField extends FieldEditor {
 			browseButton.addSelectionListener(new SelectionAdapter() {
 				public void widgetSelected(SelectionEvent e) {
 
-					openFileDialog(listTrue);
+					
 				}
 			});
 			browseButton.setText("Add");
 
+			// Remove button
+			//
 			Button removeButton = new Button(buttonComp, SWT.PUSH);
 			removeButton.addSelectionListener(new SelectionAdapter() {
 				public void widgetSelected(SelectionEvent e) {
@@ -100,6 +87,19 @@ public class BundleRepoURLField extends FieldEditor {
 			gd.horizontalAlignment = GridData.FILL;
 			removeButton.setLayoutData(gd);
 			removeButton.setText("Remove");
+			
+			// Get Button
+			//
+			Button getButton = new Button(buttonComp, SWT.PUSH);
+			getButton.addSelectionListener(new SelectionAdapter() {
+				public void widgetSelected(SelectionEvent e) {
+					//getBundleLists();
+				}
+			});
+			gd = new GridData();
+			gd.horizontalAlignment = GridData.FILL;
+			getButton.setLayoutData(gd);
+			getButton.setText("Get");
 		}
 		return buttonComp;
 	}
@@ -113,41 +113,8 @@ public class BundleRepoURLField extends FieldEditor {
 		return listField;
 	}
 
-	private Control getPathField(Composite parent) {
-		if (pathField == null) {
-			pathField = new Text(parent, SWT.BORDER);
-			pathField.setFont(parent.getFont());
-		}
-		return pathField;
-	}
-
-	private Control getBrowseFiled(Composite parent) {
-		if (browseButton == null) {
-			browseButton = new Button(parent, SWT.PUSH);
-			browseButton.addSelectionListener(new SelectionAdapter() {
-				public void widgetSelected(SelectionEvent e) {
-
-					openFileDialog(listTrue);
-				}
-			});
-			browseButton.setText("/..");
-		}
-		return browseButton;
-	}
-
 	protected void doLoad() {
-		if (listTrue == false)
-			pathField.setText(getPreferenceStore().getString(
-					getPreferenceName()));
-		else {
-			String paths = getPreferenceStore().getString(getPreferenceName());
-			String[] importPaths = paths
-					.split(PreferenceConstants.IMPORT_PATH_SEP);
-			for (int pathCount = 0; pathCount < importPaths.length; pathCount++) {
-				if (importPaths[pathCount].equals("") == false)
-					listField.add(importPaths[pathCount]);
-			}
-		}
+			
 	}
 
 	protected Shell getShell() {
@@ -203,10 +170,6 @@ public class BundleRepoURLField extends FieldEditor {
 	}
 
 	protected void doStore() {
-		if (listTrue == false)
-			getPreferenceStore().setValue(getPreferenceName(),
-					pathField.getText());
-		else {
 			String paths = "";
 			listField.selectAll();
 			for (int pathCount = 0; pathCount < listField.getSelection().length; pathCount++) {
@@ -219,6 +182,5 @@ public class BundleRepoURLField extends FieldEditor {
 			}
 			getPreferenceStore().setValue(getPreferenceName(), paths);
 		}
-	}
 
 }
