@@ -38,7 +38,7 @@ public class KarafPreference extends FieldEditorPreferencePage implements
 				PreferenceConstants.karafConsoleRequired,
 				getFieldEditorParent()));
 		
-		addField(new BundleRepoURLField("test", "test", getFieldEditorParent(), true));
+		addField(new BundleRepoURLField("test", "test", getFieldEditorParent()));
 	}
 
 	@Override

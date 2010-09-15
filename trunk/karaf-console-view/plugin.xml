@@ -15,6 +15,12 @@
             class="com.yobny.opensource.osgi.karafview.preferences.KarafPreference"
             name="Karaf"
             id="com.yobny.opensource.osgi.karafview.preferences.KarafPreference"/>
+         <page
+               category="com.yobny.opensource.osgi.karafview.preferences.KarafPreference"
+               class="com.yobny.opensource.osgi.karafview.preferences.BundleRepoPreference"
+               id="com.yobny.opensource.osgi.karafview.preferences.BundleRepoPreference"
+               name="BundleRepo">
+         </page>
    </extension>
    <extension
          point="org.eclipse.ui.console.consoleFactories">

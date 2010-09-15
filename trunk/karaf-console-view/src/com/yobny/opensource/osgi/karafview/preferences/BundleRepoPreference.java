@@ -17,7 +17,9 @@ public class BundleRepoPreference extends FieldEditorPreferencePage implements
 	
 	@Override
 	protected void createFieldEditors() {
-		// TODO Auto-generated method stub
+		addField(new BundleRepoURLField("test", "test", getFieldEditorParent()));
+	
+		addField(new BundleRepoListField(getFieldEditorParent()));
 		
 	}
 
