@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Built-By: SHGF3693
+Tool: Bnd-0.0.357
+Bundle-Name: KarafUI Commands
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Build-Jdk: 1.6.0_17
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1263881758828
+Bundle-ManifestVersion: 2
+Bundle-Description: KarafUI
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Import-Package: org.apache.felix.gogo.commands;version="[0.2,1)",org.a
+ pache.felix.karaf.shell.console;version="[1.0,2)",org.osgi.framework;
+ version="[1.5,2)",org.osgi.service.command;version="[0.2,1)",org.osgi
+ .service.event;version="1.0.0"
+Bundle-SymbolicName: karafview.karafcommands
+Bundle-DocURL: http://www.apache.org/

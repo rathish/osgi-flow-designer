@@ -1,0 +1,39 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+SystemTest administration Commands Bundle :: Shell Various Commands
+
+
+From: 'an unknown organization'
+  - JLine (http://jline.sourceforge.net) jline:jline:jar:0.9.95-20091026.080844
+    License: BSD  (LICENSE.txt)
+  - jansi (http://jansi.fusesource.org) org.fusesource.jansi:jansi:jar:1.1
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'OSGi Alliance' (http://www.osgi.org/)
+  - OSGi R4 Compendium Bundle (http://felix.apache.org/org.osgi.compendium) org.apache.felix:org.osgi.compendium:bundle:1.2.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.4.3
+
+
+From: 'The Apache Software Foundation' (http://www.apache.org)
+  - Apache Geronimo Blueprint Bundle (http://geronimo.apache.org/genesis-default-flava/genesis-java5-flava/blueprint/geronimo-blueprint) org.apache.geronimo.blueprint:geronimo-blueprint:bundle:1.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Apache Felix EventAdmin (http://felix.apache.org/org.apache.felix.eventadmin) org.apache.felix:org.apache.felix.eventadmin:bundle:1.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Felix Gogo Shell Commands (http://felix.apache.org/gogo/org.apache.felix.gogo.commands) org.apache.felix.gogo:org.apache.felix.gogo.commands:bundle:0.2.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Felix Gogo Shell Runtime (http://felix.apache.org/gogo/org.apache.felix.gogo.runtime) org.apache.felix.gogo:org.apache.felix.gogo.runtime:bundle:0.2.2
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Apache Felix Karaf :: Shell Console (http://felix.apache.org/karaf/shell/org.apache.felix.karaf.shell.console) org.apache.felix.karaf.shell:org.apache.felix.karaf.shell.console:bundle:1.0.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+
