@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Export-Package: com.yobny.opensource.osgi.karafview.sample.service
+Private-Package: com.yobny.opensource.osgi.karafview.sample.bundlea
+Built-By: SHGF3693
+Tool: Bnd-0.0.227
+Bundle-Name: BundleA
+Created-By: Apache Maven Bundle Plugin
+Export-Service: com.yobny.opensource.osgi.karafview.sample.service.Sam
+ pleService
+Bundle-Vendor: The Apache Software Foundation
+Build-Jdk: 1.6.0_18
+Bundle-Version: 1.0.0
+Bnd-LastModified: 1285911806687
+Bundle-Activator: com.yobny.opensource.osgi.karafview.sample.bundlea.B
+ undleA
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: Sample : Bundle A
+Import-Package: com.yobny.opensource.osgi.karafview.sample.service,org
+ .osgi.framework;version="1.5"
+Bundle-SymbolicName: com.yobny.opensource.osgi.karafview.sample.bundle
+ a
+Bundle-DocURL: http://www.apache.org/
+
