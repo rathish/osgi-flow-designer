@@ -7,8 +7,8 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceEvent;
 import org.osgi.framework.ServiceListener;
 
-import com.yobny.opensource.osgi.karafview.sample.bundleb.ISampleService;
-import com.yobny.opensource.osgi.karafview.sample.bundleb.SampleService;
+import com.yobny.opensource.osgi.karafview.sample.service.ISampleService;
+import com.yobny.opensource.osgi.karafview.sample.service.SampleService;
 
 public class BundleA implements BundleActivator, ServiceListener {
 
