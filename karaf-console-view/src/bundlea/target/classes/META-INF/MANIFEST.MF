@@ -10,7 +10,7 @@ Export-Service: com.yobny.opensource.osgi.karafview.sample.service.Sam
 Bundle-Vendor: The Apache Software Foundation
 Build-Jdk: 1.6.0_18
 Bundle-Version: 1.0.0
-Bnd-LastModified: 1285911806687
+Bnd-LastModified: 1286036406546
 Bundle-Activator: com.yobny.opensource.osgi.karafview.sample.bundlea.B
  undleA
 Bundle-ManifestVersion: 2

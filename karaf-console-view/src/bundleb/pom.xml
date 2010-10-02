@@ -29,10 +29,10 @@
 				<configuration>
 					<instructions>
 						<Bundle-SymbolicName>${pom.artifactId}</Bundle-SymbolicName>
-						<Private-Package>com.yobny.opensource.osgi.karafview.sample.bundleb.*</Private-Package>
+						<Private-Package>com.yobny.opensource.osgi.karafview.sample.bundleb</Private-Package>
 						<Bundle-Activator>com.yobny.opensource.osgi.karafview.sample.bundleb.BundleB</Bundle-Activator>
-						<Import-Package>com.yobny.opensource.osgi.karafview.sample.service, *</Import-Package>
-						<Export-Package>*</Export-Package>
+						<Import-Package>com.yobny.opensource.osgi.karafview.sample.service</Import-Package>
+						<Export-Package>com.yobny.opensource.osgi.karafview.sample.bundleb</Export-Package>
 					</instructions>
 				</configuration>
 			</plugin>
