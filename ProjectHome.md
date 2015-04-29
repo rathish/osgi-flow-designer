@@ -1,0 +1,1 @@
+OSGi flow designer allows to visualize the OSGi modules working. Designer interacts with the Karaf console and extracts all the modules currently deployed and renders the flow map (according to the OSGi Alliance modeling notations). Next step , designer will provide option to prepare the OSGi modules, from the graphical interface.
